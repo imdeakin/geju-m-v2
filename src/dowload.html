@@ -76,9 +76,10 @@
         };
 
         // 根据不同的终端，跳转到不同的地址
-        var android = "http://sj.qq.com/myapp/detail.htm?apkName=app.yy.geju",
+        var pc = "http://sj.qq.com/myapp/detail.htm?apkName=app.yy.geju",
+            android = "http://app.qq.com/#id=detail&appid=1105689267",
             ios = "https://itunes.apple.com/cn/app/ge-ju/id1136970653?mt=8&ign-mpt=uo%3D4";
-        var theUrl = android;
+        var theUrl = pc;
         if (Terminal.platform.android) {
             theUrl = android;
         } else if (Terminal.platform.iPhone) {
