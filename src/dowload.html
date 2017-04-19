@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>格局APP-下载地址</title>
+    <style>
+        .weixin-tip {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .weixin-tip p {
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 5%;
+        }
+
+        .weixin-tip p img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="weixin-tip">
+    <p><img src="/m/geju/assets/img/live_weixin.png" alt="微信打开"/></p>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var isWeixin = isWxPlatform();
+        if (isWeixin) {
+            showTips();
+        } else {
+            redirectToDownload();
+        }
+    };
+
+    function hideTips() {
+        document.getElementsByClassName('weixin-tip')[0].style.display = "none";
+    }
+
+    function showTips() {
+        document.getElementsByClassName('weixin-tip')[0].style.display = "block";
+    }
+
+    function isWxPlatform() {
+        var ua = navigator.userAgent.toLowerCase();
+        var result = ua.match(/MicroMessenger/i) + '';
+        return result == "micromessenger";
+    }
+
+    function redirectToDownload() {
+        // 获取终端的相关信息
+        var Terminal = {
+            // 辨别移动终端类型
+            platform: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {
+                    // android终端或者uc浏览器
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                    // 是否为iPhone或者QQHD浏览器
+                    iPhone: u.indexOf('iPhone') > -1,
+                    // 是否iPad
+                    iPad: u.indexOf('iPad') > -1
+                };
+            }()
+        };
+
+        // 根据不同的终端，跳转到不同的地址
+        var android = "http://sj.qq.com/myapp/detail.htm?apkName=app.yy.geju",
+            ios = "https://itunes.apple.com/cn/app/ge-ju/id1136970653?mt=8&ign-mpt=uo%3D4";
+        var theUrl = android;
+        if (Terminal.platform.android) {
+            theUrl = android;
+        } else if (Terminal.platform.iPhone) {
+            theUrl = ios;
+        } else if (Terminal.platform.iPad) {
+            theUrl = ios;
+        }
+
+        location.href = theUrl;
+    }
+</script>
+</body>
+</html>

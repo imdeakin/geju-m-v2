@@ -19,6 +19,8 @@ export class AppComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         let $this = this;
+
+        // 轮播效果
         this.swiper = new Swiper('#' + this.id, {
             direction: 'vertical',
             speed: 800,
@@ -51,6 +53,7 @@ export class AppComponent implements AfterViewInit {
             }
         });
 
+        // 图片爆破效果
         this.imgBroke = ImgBroke({
             conId: 'wx-phone-cover',
             loop: true,
