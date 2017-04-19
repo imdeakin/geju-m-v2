@@ -1,0 +1,32 @@
+<div id="{{id}}" class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <wx-page></wx-page>
+        </div>
+        <div class="swiper-slide">
+            <chat-page></chat-page>
+        </div>
+        <div class="swiper-slide">
+            <friends-page></friends-page>
+        </div>
+        <div class="swiper-slide">
+            <notice-page></notice-page>
+        </div>
+        <div class="swiper-slide">
+            <live-page></live-page>
+        </div>
+        <div class="swiper-slide">
+            <team-page></team-page>
+        </div>
+        <div class="swiper-slide">
+            <steward-page></steward-page>
+        </div>
+    </div>
+    <div class="footer">
+        <dl-btn></dl-btn>
+        <div class="bounce-arrow" [class.visible]="arrowShow">
+            <bounce-arrow></bounce-arrow>
+        </div>
+    </div>
+    <wx-tips></wx-tips>
+</div>
