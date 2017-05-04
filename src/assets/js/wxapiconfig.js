@@ -52,7 +52,7 @@ function wxConfig(signParm) {
         wx.onMenuShareTimeline({
             title: '格局：全新的松散组织连接方式', // 分享标题
             link: 'http://www.gzyueyun.com/m/geju/index.html', // 分享链接
-            imgUrl: 'http://www.gzyueyun.com/m/geju/img/logo.png', // 分享图标
+            imgUrl: 'http://www.gzyueyun.com/m/geju/assets/img/logo.png', // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             },
@@ -65,7 +65,7 @@ function wxConfig(signParm) {
             title: '格局：全新的松散组织连接方式', // 分享标题
             desc: '格局正在帮助开创未来的组织协作,提升沟通效率,让组织管理更简单、高效、安全.', // 分享描述
             link: 'http://www.gzyueyun.com/m/geju/index.html', // 分享链接
-            imgUrl: 'http://www.gzyueyun.com/m/geju/img/logo.png', // 分享图标
+            imgUrl: 'http://www.gzyueyun.com/m/geju/assets/img/logo.png', // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {

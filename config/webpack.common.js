@@ -28,7 +28,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: '格局：全新的松散组织连接方式',
-  baseUrl: '/m/geju/',
+  baseUrl: '',
   isDevServer: helpers.isWebpackDevServer()
 };
 
@@ -153,7 +153,7 @@ module.exports = function (options) {
          */
         {
           test: /\.css$/,
-          use: ['to-string-loader', 'css-loader'],
+          use: ['to-string-loader', 'css-loader', 'postcss-loader'],
           exclude: [helpers.root('src', 'styles')]
         },
 
@@ -164,7 +164,7 @@ module.exports = function (options) {
          */
         {
           test: /\.scss$/,
-          use: ['to-string-loader', 'css-loader', 'sass-loader'],
+          use: ['to-string-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
           exclude: [helpers.root('src', 'styles')]
         },
 
@@ -265,7 +265,7 @@ module.exports = function (options) {
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
       new CopyWebpackPlugin([
-        { from: 'src/m/geju/assets', to: 'assets' },
+        { from: 'src/assets', to: 'assets' },
         { from: 'src/meta'}
       ]),
 

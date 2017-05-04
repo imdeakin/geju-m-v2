@@ -1,21 +1,22 @@
 .con {
     width: 100%;
     height: 100%;
-    background: url("/m/geju/assets/img/page_bg_01.jpg") no-repeat center/cover;
+    background: url("/assets/img/page_bg_06.jpg") no-repeat center/cover;
 }
 
 .banner {
     position: relative;
     text-align: center;
-    padding-top: .4rem;
-    padding-bottom: .62rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
 }
 
 .phone {
     position: relative;
     left: 50%;
-    width: 3.34rem;
-    margin-left: -1.67rem;
+    width: 2.8rem;
+    margin-left: -1.4rem;
+    z-index: 9;
 }
 
 .phone-frame {
@@ -25,17 +26,17 @@
 
 .phone-cover {
     position: absolute;
-    top: .86rem;
-    left: .22rem;
-    width: 2.91rem;
-    height: auto;
+    top: .7rem;
+    left: .18rem;
+    width: 2.45rem;
+    height: 4.32rem;
 }
 
 .icons {
     position: absolute;
-    top: 1.26rem;
-    left: .56rem;
-    width: 5.92rem;
+    top: 1rem;
+    left: 1.4rem;
+    width: 4.5rem;
     height: auto;
 }
 
@@ -45,38 +46,38 @@
 }
 
 .item:nth-child(1) {
-    top: 4.05rem;
-    left: .9rem;
+    top: 3.5rem;
+    left: 1.2rem;
     width: 2.7rem;
-    z-index:2
+    z-index: 2;
 }
 
 .item:nth-child(2) {
-    top: 2.2rem;
-    right: 1.4rem;
+    top: 1.6rem;
+    right: 1rem;
     width: 2.93rem;
 }
 
 .item:nth-child(3) {
-    top: 4.3rem;
-    right: .65rem;
+    top: 4rem;
+    right: .4rem;
     width: 3.62rem;
 }
 
 .describe {
     color: white;
     text-align: center;
-    margin-bottom: .4rem;
+    margin-top: .1rem;
 }
 
 .describe > h3 {
-    font-size: .46rem;
+    font-size: .32rem;
     line-height: 1em;
-    margin-bottom: .3rem;
+    margin-bottom: .12rem;
 }
 
 .describe > p {
     font-size: .28rem;
     font-weight: lighter;
-    line-height: .62rem;
+    line-height: .4rem;
 }
